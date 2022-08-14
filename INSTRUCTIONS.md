@@ -11,6 +11,14 @@ Full stack is pretty awesome, huh? The idea that you are able to spin up a full 
 
 You are going to create a 'TO DO' application. This type of application is very common to tackle when learning a new language, which makes it extremely valuable to work through for the first time. Chances are good that at some point in your career you will tackle this again while learning another language.
 
+## To-Do List for the To-Do App
+
+[x] Create basic HTML for to-do app including input field and submit button for new tasks
+[] Create SQL database and table for to-do list items
+
+
+[] Update database.sql file with all CREATE-TABLE queries
+
 **Here are the specific components for the challenge:**
 
 * Create a front end experience that allows a user to create a Task.
