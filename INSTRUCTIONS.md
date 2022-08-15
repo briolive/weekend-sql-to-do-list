@@ -29,7 +29,8 @@ You are going to create a 'TO DO' application. This type of application is very 
 [x] Delete button works!
 [x] In client.js, create PUT request for completed tasks
 [x] In tasks.router.js, create router.put
-[x] Update button works to update "complete" in table
+[x] Complete button works to update "complete" in table
+[x] Complete button changes the completed task
 
 
   [] Set up GET to receive info from database

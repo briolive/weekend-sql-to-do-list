@@ -31,6 +31,30 @@ function sendTaskToServer(){
     });
 }
 
+// getTasks before updating for loop to check task status
+// function getTasks(){
+//     $.ajax({
+//         type: 'GET',
+//         url: '/tasks'
+//     }).then(function (response) {
+//         console.log(response);
+//         $('#task-list').empty();
+//         for (let i=0; i<response.length; i++){
+//             let tasks = response[i];
+//             $('#task-list').append(`
+//             <li>
+//             ${tasks.task}
+//             <button class="task-complete" data-id="${tasks.id}">Complete</button>
+//             <button class="task-delete" data-id="${tasks.id}">Delete</button>
+//             </li>
+//             `);
+//         } // end for loop
+//         // checkTasks();
+//     }).catch(function (error) {
+//         console.log(error);
+//         alert('Something went wrong!');
+//     });
+// };
 
 function getTasks(){
     $.ajax({
@@ -41,14 +65,26 @@ function getTasks(){
         $('#task-list').empty();
         for (let i=0; i<response.length; i++){
             let tasks = response[i];
-            $('#task-list').append(`
-            <li>
-            ${tasks.task}
-            <button class="task-complete" data-id="${tasks.id}">Complete</button>
-            <button class="task-delete" data-id="${tasks.id}">Delete</button>
-            </li>
-            `);
-        }
+            if(tasks.complete === 'no'){
+                $('#task-list').append(`
+                <li>
+                ${tasks.task}
+                <button class="task-complete" data-id="${tasks.id}">Complete</button>
+                <button class="task-delete" data-id="${tasks.id}">Delete</button>
+                </li>
+               `);
+            } else {
+                $('#task-list').append(`
+                <li>
+                <s>${tasks.task}</s>
+                <button class="disabled" data-id="${tasks.id}">Complete</button>
+                <button class="task-delete" data-id="${tasks.id}">Delete</button>
+                </li>
+                `);
+
+        } // end for loop
+    };
+        // checkTasks();
     }).catch(function (error) {
         console.log(error);
         alert('Something went wrong!');
@@ -83,3 +119,8 @@ function completeTask(){
         alert('Something went wrong in completeTask.');
     })
 }
+
+
+// function checkTasks(){
+//     for(let i=0; i<response.length)
+// }
