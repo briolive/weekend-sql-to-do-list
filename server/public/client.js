@@ -42,7 +42,6 @@ function getTasks(){
             $('#task-list').append(`
             <li>
             ${tasks.task}
-            ${tasks.complete}
             <button id="completeTask">Complete</button>
             <button id="deleteTask">Delete</button>
             </li>
