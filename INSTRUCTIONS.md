@@ -17,14 +17,19 @@ You are going to create a 'TO DO' application. This type of application is very 
 [x] Source in all scripts, install Express and PG
 [x] Create SQL database and table for to-do list tasks
 [x] Update database.sql file with all CREATE-TABLE queries
+[x] Source in pool.js
 [x] Use PG to return results from our database:
   [x] In client.js, create GET request that gets contents of to-do list and displays the tasks on the DOM
   [x] Set up tasksRouter on server.js
   [x] In tasks.router.js, create GET to send back tasks from the server
 [x] In client.js, create POST request to send new tasks to the server
-[] In server.js, create tasksRouter.post to take in new task and push it into the table
-[] In server.js, create app.get that sends the tasks to the client
-[x] Source in pool.js
+[x] In tasks.router.js, create router.post to take in new task, push it into the table, and return new task list
+[x] In client.js, create deleteTasks click handler and function with ajax DELETE
+[x] In tasks.router.js, create router.delete
+[x] Delete button works!
+
+
+
   [] Set up GET to receive info from database
   [] Set up POST to add to database and append DOM properly
   [] 

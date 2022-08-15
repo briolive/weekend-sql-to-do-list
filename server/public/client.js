@@ -7,6 +7,7 @@ $(document).ready(onReady);
 function onReady(){
     // set up click listeners
     $('#add-task-button').on('click', sendTaskToServer);
+    $('body').on('click', '.task-delete', deleteTask);
     // on page load request list of tasks
     getTasks();
 }
@@ -42,8 +43,8 @@ function getTasks(){
             $('#task-list').append(`
             <li>
             ${tasks.task}
-            <button id="completeTask">Complete</button>
-            <button id="deleteTask">Delete</button>
+            <button class="task-complete" data-id="${tasks.id}">Complete</button>
+            <button class="task-delete" data-id="${tasks.id}">Delete</button>
             </li>
             `);
         }
@@ -52,3 +53,18 @@ function getTasks(){
         alert('Something went wrong!');
     });
 };
+
+
+function deleteTask(){
+    const taskId = $(this).data('id');
+    console.log('in deleteTask', taskId);
+    $.ajax({
+        type: 'DELETE',
+        url: `/tasks/${taskId}`
+    }).then(function (response) {
+        getTasks();
+    }).catch(function (error) {
+        console.log(error);
+        alert('Something went wrong with deleteTask.');
+    })
+}
