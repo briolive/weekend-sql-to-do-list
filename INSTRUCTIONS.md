@@ -14,7 +14,7 @@ You are going to create a 'TO DO' application. This type of application is very 
 ## To-Do List for the To-Do App
 
 [x] Create basic HTML for to-do app including input field and submit button for new tasks
-[] Create SQL database and table for to-do list items
+[x] Create SQL database and table for to-do list items
 
 
 [] Update database.sql file with all CREATE-TABLE queries
