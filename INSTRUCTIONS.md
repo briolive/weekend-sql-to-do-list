@@ -27,7 +27,8 @@ You are going to create a 'TO DO' application. This type of application is very 
 [x] In client.js, create deleteTasks click handler and function with ajax DELETE
 [x] In tasks.router.js, create router.delete
 [x] Delete button works!
-
+[x] In client.js, create PUT request for completed tasks
+[] In tasks.router.js, create router.put
 
 
   [] Set up GET to receive info from database

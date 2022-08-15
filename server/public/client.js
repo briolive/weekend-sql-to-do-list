@@ -8,6 +8,7 @@ function onReady(){
     // set up click listeners
     $('#add-task-button').on('click', sendTaskToServer);
     $('body').on('click', '.task-delete', deleteTask);
+    $('body').on('click', '.task-complete', completeTask);
     // on page load request list of tasks
     getTasks();
 }
@@ -66,5 +67,19 @@ function deleteTask(){
     }).catch(function (error) {
         console.log(error);
         alert('Something went wrong with deleteTask.');
+    })
+}
+
+function completeTask(){
+    const taskId = $(this).data('id');
+    console.log('in completeTask', taskId);
+    $.ajax({
+        type: 'PUT',
+        url: `tasks/${taskId}`,
+    }).then(function (response) {
+        getTasks();
+    }).catch(function (error) {
+        console.log(error);
+        alert('Something went wrong in completeTask.');
     })
 }
