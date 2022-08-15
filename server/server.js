@@ -7,6 +7,7 @@ const PORT = 5001;
 
 // where the public/static files are:
 app.use(express.static('server/public'));
+app.use(express.urlencoded({ extended: true }));
 
 
 const tasksRouter = require('./routes/tasks.router.js');

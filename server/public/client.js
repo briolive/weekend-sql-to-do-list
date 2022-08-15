@@ -1,4 +1,4 @@
-const { noData } = require("pg-protocol/dist/messages");
+// const { noData } = require("pg-protocol/dist/messages");
 
 console.log('JS sourced.');
 
@@ -13,12 +13,13 @@ function onReady(){
 
 
 function sendTaskToServer(){
+    console.log('in sendTaskToServer');
     $.ajax({
         type: 'POST',
         url: '/tasks',
         data: {
             task: $('#add-new-task').val(),
-            complete: 'no'
+            complete: 'no',
         }
     }).then(function (response) {
         getTasks();
