@@ -17,11 +17,14 @@ You are going to create a 'TO DO' application. This type of application is very 
 [x] Source in all scripts, install Express and PG
 [x] Create SQL database and table for to-do list tasks
 [x] Update database.sql file with all CREATE-TABLE queries
+[] Use PG to return results from our database:
+  [x] In client.js, create GET request that gets contents of to-do list and displays the tasks on the DOM
+  [x] Set up tasksRouter on server.js
+  [x] In tasks.router.js, create GET to request tasks from the server
 [] In client.js, create POST request to send new tasks to the server
 [] In server.js, create tasksRouter.post to take in new task and push it into the table
-[] In client.js, create GET request that gets contents of to-do list and displays the tasks on the DOM
 [] In server.js, create app.get that sends the tasks to the client
-[] Source in pool.js
+[x] Source in pool.js
   [] Set up GET to receive info from database
   [] Set up POST to add to database and append DOM properly
   [] 
