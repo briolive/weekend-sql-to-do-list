@@ -6,6 +6,12 @@ body {
 
 h1 {
     font-family: Garamond, Helvetica, "Times New Roman";
+    margin: 25px 0;
+}
+
+h2 {
+    text-decoration: bold;
+    font-size: 16px;
 }
 
 img {
@@ -14,6 +20,7 @@ img {
 
 li {
     margin: 5px 0;
+    font-size: 16px;
 }
 
 .disabled {

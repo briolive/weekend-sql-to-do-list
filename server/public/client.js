@@ -24,6 +24,7 @@ function sendTaskToServer(){
             complete: 'no',
         }
     }).then(function (response) {
+        $('#add-new-task').val('');
         getTasks();
     }).catch(function (error) {
         console.log(error);
@@ -107,6 +108,8 @@ function deleteTask(){
 }
 
 function completeTask(){
+    // a little moral support :)
+    alert('Well done!');
     const taskId = $(this).data('id');
     console.log('in completeTask', taskId);
     $.ajax({

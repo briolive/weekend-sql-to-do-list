@@ -31,11 +31,8 @@ You are going to create a 'TO DO' application. This type of application is very 
 [x] In tasks.router.js, create router.put
 [x] Complete button works to update "complete" in table
 [x] Complete button changes the completed task
-
-
-  [] Set up GET to receive info from database
-  [] Set up POST to add to database and append DOM properly
-  [] 
+[x] Add CSS styling
+[] Complete README.md
 
 
 **Here are the specific components for the challenge:**
