@@ -1,3 +1,5 @@
+const { noData } = require("pg-protocol/dist/messages");
+
 console.log('JS sourced.');
 
 $(document).ready(onReady);
@@ -11,7 +13,19 @@ function onReady(){
 
 
 function sendTaskToServer(){
-
+    $.ajax({
+        type: 'POST',
+        url: '/tasks',
+        data: {
+            task: $('#add-new-task').val(),
+            complete: 'no'
+        }
+    }).then(function (response) {
+        getTasks();
+    }).catch(function (error) {
+        console.log(error);
+        alert('Something went wrong!');
+    });
 }
 
 
@@ -25,9 +39,12 @@ function getTasks(){
         for (let i=0; i<response.length; i++){
             let tasks = response[i];
             $('#task-list').append(`
-            <p>${tasks.id}
+            <li>
             ${tasks.task}
-            ${tasks.complete}</p>
+            ${tasks.complete}
+            <button id="completeTask">Complete</button>
+            <button id="deleteTask">Delete</button>
+            </li>
             `);
         }
     }).catch(function (error) {

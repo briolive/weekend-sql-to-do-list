@@ -20,7 +20,7 @@ You are going to create a 'TO DO' application. This type of application is very 
 [] Use PG to return results from our database:
   [x] In client.js, create GET request that gets contents of to-do list and displays the tasks on the DOM
   [x] Set up tasksRouter on server.js
-  [x] In tasks.router.js, create GET to request tasks from the server
+  [x] In tasks.router.js, create GET to send back tasks from the server
 [] In client.js, create POST request to send new tasks to the server
 [] In server.js, create tasksRouter.post to take in new task and push it into the table
 [] In server.js, create app.get that sends the tasks to the client
