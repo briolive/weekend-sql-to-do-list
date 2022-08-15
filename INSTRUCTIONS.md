@@ -15,10 +15,17 @@ You are going to create a 'TO DO' application. This type of application is very 
 
 [x] Create basic HTML for to-do app including input field and submit button for new tasks
 [x] Source in all scripts, install Express and PG
-[x] Create SQL database and table for to-do list items
+[x] Create SQL database and table for to-do list tasks
+[x] Update database.sql file with all CREATE-TABLE queries
+[] In client.js, create POST request to send new tasks to the server
+[] In server.js, create tasksRouter.post to take in new task and push it into the table
+[] In client.js, create GET request that gets contents of to-do list and displays the tasks on the DOM
+[] In server.js, create app.get that sends the tasks to the client
+[] Source in pool.js
+  [] Set up GET to receive info from database
+  [] Set up POST to add to database and append DOM properly
+  [] 
 
-
-[] Update database.sql file with all CREATE-TABLE queries
 
 **Here are the specific components for the challenge:**
 
