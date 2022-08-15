@@ -14,6 +14,7 @@ You are going to create a 'TO DO' application. This type of application is very 
 ## To-Do List for the To-Do App
 
 [x] Create basic HTML for to-do app including input field and submit button for new tasks
+[x] Source in all scripts, install Express and PG
 [x] Create SQL database and table for to-do list items
 
 
