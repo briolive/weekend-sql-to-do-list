@@ -32,7 +32,7 @@ You are going to create a 'TO DO' application. This type of application is very 
 [x] Complete button works to update "complete" in table
 [x] Complete button changes the completed task
 [x] Add CSS styling
-[] Complete README.md
+[x] Complete README.md
 
 
 **Here are the specific components for the challenge:**
