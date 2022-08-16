@@ -6,7 +6,7 @@ Welcome to my first SQL To-Do List! You can add new tasks through a form that ar
 
 ## Screen Shot
 
-[SQLToDo.png]
+![SQL To Do List Screenshot](/SQLToDo.png)
 
 ## Acknowledgement
 
